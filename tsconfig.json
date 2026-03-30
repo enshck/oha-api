@@ -9,7 +9,7 @@
     "noImplicitAny": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "types": ["node"],
+    "types": ["node", "jest"],
     "allowSyntheticDefaultImports": true
   },
   "exclude": ["node_modules"],
