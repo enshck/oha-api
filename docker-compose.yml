@@ -1,0 +1,16 @@
+services:
+  eh_api:
+    image: postgres:16
+    restart: always
+    container_name: eh_api
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: eh_api
+    volumes:
+      - eh_api_data:/var/lib/postgresql/data
+    ports:
+      - "54310:5432"
+
+volumes:
+  eh_api_data:

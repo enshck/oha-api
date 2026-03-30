@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "commonjs",
+    "skipLibCheck": true,
+    "lib": ["es2017", "es2019", "es2020", "dom"],
+    "outDir": "dist",
+    "rootDir": "app",
+    "noImplicitAny": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "types": ["node"],
+    "allowSyntheticDefaultImports": true
+  },
+  "exclude": ["node_modules"],
+  "include": ["app", "app/definition/*.d.ts", "./eslint.config.js", "./prettierrc.js"],
+  "typedocOptions": {
+    "entryPointStrategy": "resolve",
+    "entryPoints": [
+      "app/controllers/*.ts",
+      "app/interfaces/*.ts",
+      "app/middlewares/*.ts",
+      "app/models/*.ts",
+      "app/services/*.ts",
+      "app/shared/dto/*.ts",
+      "app/shared/constants/*.ts"
+    ],
+    "excludeExternals": "**/node_modules/**",
+    "out": "docs",
+    "excludePrivate": true
+  }
+}
