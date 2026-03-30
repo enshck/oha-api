@@ -16,7 +16,8 @@ export const getCitiesResponseValidator = Joi.array().items(
     longitude: stringRequired.min(1).max(30),
     population: stringRequired.min(1).max(30),
     founded: stringRequired.min(1).max(4),
-    landmarks: Joi.array().items(stringRequired.min(1).max(50)),
+    landmarks: Joi.array().items(stringRequired.min(1).max(50)).min(1),
+    description: stringOptional.min(1).max(10000).allow("", null),
   }),
 );
 

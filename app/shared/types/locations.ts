@@ -3,3 +3,13 @@ export interface GetCitiesQuery {
   country?: string;
   continent?: string;
 }
+
+export interface WikiDescription {
+  query: {
+    pages: {
+      [key: string]: {
+        extract: string;
+      };
+    };
+  };
+}

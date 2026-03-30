@@ -1,9 +1,9 @@
 import * as Router from "koa-router";
 
-import logs from "./locations";
+import locations from "./locations";
 import { swagger } from "./swagger";
 
-const routes = [logs];
+const routes = [locations];
 
 const router = new Router({ prefix: "/api/v1" });
 

@@ -4,24 +4,30 @@ import { getCities, getContinents, getCountries } from "../services/locations.se
 
 /**
  * Handler that returns all cities from the system, can be filtered
- * @returns Returns a Promise that resolves location values
+ * @returns Returns location values
  */
 export const getCitiesHandler = async (ctx: ParameterizedContext) => {
-  return await getCities(ctx.request.query);
+  const result = await getCities(ctx.request.query);
+
+  ctx.ok(result);
 };
 
 /**
  * Handler that returns all countries from the system
- * @returns Returns a Promise that resolves location values
+ * @returns Returns location values
  */
-export const getCountriesHandler = async (ctx: ParameterizedContext) => {
-  return await getCountries();
+export const getCountriesHandler = (ctx: ParameterizedContext) => {
+  const result = getCountries();
+
+  ctx.ok(result);
 };
 
 /**
  * Handler that returns all continents from the system
- * @returns Returns a Promise that resolves location values
+ * @returns Returns location values
  */
-export const getContinentsHandler = async (ctx: ParameterizedContext) => {
-  return await getContinents();
+export const getContinentsHandler = (ctx: ParameterizedContext) => {
+  const result = getContinents();
+
+  ctx.ok(result);
 };

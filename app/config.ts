@@ -7,6 +7,7 @@ require("dotenv").config({ path: envFile });
 
 const common: ConfigInterface = {
   env: (process.env.NODE_ENV as ENVIRONMENT) || ENVIRONMENT.development,
+  host: process.env.HOST,
   port: Number(process.env.PORT),
 };
 

@@ -33,7 +33,7 @@ locations.route({
     swagger: {
       summary: "Returns all cities from the system, can be filtered",
       description: "Returns all cities from the system, can be filtered",
-      tags: ["LOCATIONS", "CITIES"],
+      tags: ["Locations", "Cities"],
     },
   },
   handler: getCitiesHandler,
@@ -50,16 +50,13 @@ locations.route({
       500: {
         body: errorValidators,
       },
-      400: {
-        body: errorValidators,
-      },
     },
   },
   meta: {
     swagger: {
-      summary: "Returns all countries from the system, can be filtered",
-      description: "Returns all countries from the system, can be filtered",
-      tags: ["LOCATIONS", "COUNTRIES"],
+      summary: "Returns all countries from the system",
+      description: "Returns all countries from the system",
+      tags: ["Locations", "Countries"],
     },
   },
   handler: getCountriesHandler,
@@ -76,16 +73,13 @@ locations.route({
       500: {
         body: errorValidators,
       },
-      400: {
-        body: errorValidators,
-      },
     },
   },
   meta: {
     swagger: {
       summary: "Returns all continents from the system",
       description: "Returns all continents from the system",
-      tags: ["LOCATIONS", "CONTINENTS"],
+      tags: ["Locations", "Continents"],
     },
   },
   handler: getContinentsHandler,
