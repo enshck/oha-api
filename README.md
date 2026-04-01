@@ -12,10 +12,11 @@ Small REST API built with `Koa` and `TypeScript` for working with locations: cit
 
 ## Quick Start
 
+**Please make sure that you use node v22 and yarn**
+
 ### 1. Install dependencies
 
 ```bash
-Please make sure that you use node v22
 yarn install
 ```
 
